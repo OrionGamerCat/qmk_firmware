@@ -43,9 +43,11 @@ const uint32_t PROGMEM unicode_map[] = {
     [COE]   = 0x00D6,  // Ö
     [CAE]   = 0x00C4,  // Ä
     [CUE]   = 0x00DC,  // Ü
+    [CSS]   = 0x1E9E,  // ẞ (I had no idea a capital Shap S existed prior to editing this but fair enough)
     [OE]    = 0x00F6,  // ö
     [AE]    = 0x00E4,  // ä
     [UE]    = 0x00FC,  // ü
+    [SS]    = 0x00DF,  // ß
     [SKULL] = 0x1F480, // 💀
 };
 
@@ -81,11 +83,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
     [WIN_FN] = LAYOUT_ansi_82(
         X(SKULL),           KC_BRID,  KC_BRIU,  KC_TASK,  KC_FLXP,  RGB_VAD,  RGB_VAI,  KC_MPRV,  KC_MPLY,  KC_MNXT,     KC_MUTE,     KC_VOLD,  KC_VOLU,  KC_TRNS,  KC_PAUS,
-        KC_TRNS,  KC_F13,   KC_F14,   KC_F15,   KC_F16,   KC_F17,   KC_F18,   KC_F18,   KC_F19,   KC_F20,   KC_F21 ,     KC_F22,      KC_F23,   KC_F24,             KC_HOME,
+        KC_TRNS,  KC_F13,   KC_F14,   KC_F15,   KC_F16,   KC_F17,   KC_F18,   KC_F18,   KC_F19,   KC_F20,   KC_F21 ,     XP(SS, CSS), KC_F23,   KC_F24,             KC_HOME,
         RGB_TOG,  RGB_MOD,  RGB_VAI,  RGB_HUI,  RGB_SAI,  RGB_SPI,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,     XP(UE, CUE), KC_TRNS,  KC_TRNS,            KC_INS,
         KC_TRNS,  RGB_RMOD, RGB_VAD,  RGB_HUD,  RGB_SAD,  RGB_SPD,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  XP(OE, COE), XP(AE, CAE),           KC_TRNS,            KC_END,
         KC_LSFT,            KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,     KC_TRNS,               KC_RSFT,  KC_TRNS,
-        KC_TRNS,  KC_TRNS,  KC_TRNS,                                KC_TRNS,                                QK_BOOT,     KC_TRNS,     KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS)
+        KC_TRNS,  KC_TRNS,  QK_MAKE,                                KC_TRNS,                                QK_BOOT,     KC_TRNS,     KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS)
 };
 
 
