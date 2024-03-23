@@ -1,0 +1,1 @@
+#define UNICODE_SELECTED_MODES UC_LNX  // Change Input Mode here if you are not using Linux (https://docs.qmk.fm/#/feature_unicode?id=input-modes)
